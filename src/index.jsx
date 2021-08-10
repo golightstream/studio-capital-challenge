@@ -7,9 +7,9 @@ const textarea = document.getElementById('text-input')
 const menuContainer = document.getElementById('menu-container')
 
 /**
- * Add work here:
+ * Open a country capital menu on keystroke (Shift + .)
+ *  Only opens when the textarea has focus.
  */
-
 document.addEventListener('keypress', (e) => {
   // Ignore unless textarea is focused
   if (e.target !== textarea) return
@@ -23,10 +23,6 @@ document.addEventListener('keypress', (e) => {
     renderMenu()
   }
 })
-
-const unrenderMenu = () => {
-  menuContainer.innerHTML = ``
-}
 
 const renderMenu = () => {
   // Get bounding rect for positioning
@@ -42,8 +38,13 @@ const renderMenu = () => {
     position: 'fixed',
   })
 
-  // Render the container into the DOM
+  // TODO: Improve the position of the menu
+  //  ...
+
+  // Un-render any existing menu
   unrenderMenu()
+
+  // Render the menu container into the DOM
   menuContainer.append(container)
 
   // Render the menu into the container
@@ -58,9 +59,15 @@ const renderMenu = () => {
   )
 }
 
-// (Nice to have) Some way of hiding the menu when it loses focus
-//  Requires tabindex="0" in index.html
+/**
+ * Hide the menu when it loses focus
+ */
 menuContainer.addEventListener('focusout', (e) => {
   if (menuContainer.contains(e.relatedTarget)) return
   unrenderMenu()
 })
+
+const unrenderMenu = () => {
+  menuContainer.innerHTML = ``
+}
+

@@ -2,9 +2,16 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  overflow: auto;
   height: 100%;
   width: 100%;
-  overflow-y: auto;
+}
+
+.menuContent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow: auto;
   background: #444;
   padding: 6px 8px;
   border-radius: 5px;
@@ -13,6 +20,13 @@
 
 .menuSearch {
   margin-bottom: 6px;
+  width: 100%;
+}
+
+.menuList {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .menuItem {
@@ -24,4 +38,10 @@
 
 .menuItem:hover {
   opacity: 1;
+}
+
+.menuCaret {
+  fill: #444444;
+  height: 15px;
+  width: 22px;
 }
