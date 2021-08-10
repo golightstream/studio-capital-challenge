@@ -25,6 +25,8 @@ export default {
   },
   packageOptions: {
     /* ... */
+    source: 'remote',
+    origin: 'https://cdn.skypack.dev',
   },
   devOptions: {
     /* ... */
@@ -32,4 +34,4 @@ export default {
   buildOptions: {
     /* ... */
   },
-};
+}
