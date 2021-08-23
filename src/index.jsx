@@ -32,7 +32,7 @@ const renderMenu = () => {
   const container = document.createElement('div')
   Object.assign(container.style, {
     width: `${width}px`,
-    height: `${height}px`,
+    height: `200px`,
     left: `${x}px`,
     top: `${y + height}px`,
     position: 'fixed',
@@ -70,4 +70,3 @@ menuContainer.addEventListener('focusout', (e) => {
 const unrenderMenu = () => {
   menuContainer.innerHTML = ``
 }
-

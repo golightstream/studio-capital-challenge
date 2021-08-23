@@ -43,7 +43,6 @@ export const Menu = ({
       <div className="menuContent">
         <input
           className="menuSearch"
-          /* Begin added */
           autoFocus
           onChange={(e) => {
             try {
@@ -52,13 +51,10 @@ export const Menu = ({
               console.warn(e)
             }
           }}
-          /* End added */
         />
         <div className="menuList">
           {capitals
-            /* Begin added */
             .filter((x) => filter.test(x.country) || filter.test(x.city ?? ''))
-            /* End added */
             .map((x) => (
               <Item
                 key={x.country}
