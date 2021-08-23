@@ -26,11 +26,12 @@ Navigate your browser to the running server:
 
 ### Problems
 
-1) The capital selector modal may be partially off screen under certain circumstances.
-2) The modal's caret does not point to the cursor's current position.
+1) The modal's caret does not point to the cursor's current position.
+2) The capital selector modal may be partially off screen under certain circumstances.
 3) The city is always inserted at the end of the text (instead of the cursor's current position).
-4) The search filter is case-sensitive ('ar' does not match 'Argentina')
-5) *(Any others?)*
+4) The search filter is case-sensitive ('ar' does not match 'Argentina').  
+
+*(Do you notice any others? We'd love to hear your thoughts on improving the user experience)*
 
 ----
 
